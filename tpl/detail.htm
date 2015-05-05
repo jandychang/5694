@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title><?php echo $aDet['name']; ?>_<?php echo $aDet['name']; ?>全集_<?php echo $aDet['name']; ?>下载</title><meta name="keywords" content="<?php echo $aDet['name']; ?>,<?php echo $aDet['name']; ?>全集,<?php echo $aDet['name']; ?>下载" /><meta name="description" content="<?php echo $aDet['name']; ?>提供<?php echo $aDet['name']; ?>全集剧情介绍,<?php echo $aDet['name']; ?>下载影片观点评论,以及喜欢看《<?php echo $aDet['name']; ?>》的人也喜欢看的其它精彩影片推荐。" /><link href="/i/c.css" rel="stylesheet" type="text/css" /><script type="text/javascript" src="/i/s.js"></script></head><body><h1><?php echo $aDet['name'] ?></h1><p id="t"><a href="/"><img src="/i/lg.png" alt="美剧排行榜" /></a></p><?php echo gCla($aDet['oid']); ?><div id="a960"><script>a1()</script></div><p id="h">当前位置：<a href="/"><?php echo $aIndex['name']; ?></a> &gt; <?php echo $aDet['oid']>0?'<a href="/'.$aCla[$aDet['oid']]['pinyin'].'">'.$aCla[$aDet['oid']]['name'].'片</a> &gt; ':''; ?><a href="/<?php echo $aDet['id'] ?>"><?php echo $aDet['name'] ?></a></p><dl id="de"><dt><script>a3()</script></dt><dd><script>a5();</script><p>名　　称 ：<a href="/<?php echo $aDet['id'] ?>"><?php echo $aDet['name'] ?></a><br />类　　型 ：<?php echo $aDet['oid']>0?'<a href="/'.$aCla[$aDet['oid']]['pinyin'].'">'.$aCla[$aDet['oid']]['name'].'片</a>':''; ?><br />主　　演 ：<?php echo $aDet['zy'] ?><br />地　　区 ：欧美<br />语　　言 ：<?php echo $aDet['lang'] ?><br />年　　份 ：<?php echo $aDet['year'] ?><br />更新时间 ：<?php echo date('Y-m-d H:i',$aDet['utime']) ?></p><img src="/up/m/<?php echo $aDet['pic'] ?>" alt="<?php echo $aDet['name'] ?>" /></dd></dl><?php
+$m=0;
+foreach ($aOrd as $n => $s){
+    echo '<p id="dt">';
+
+    if ($m==0 && !empty($aLike)){
+        echo '<s>您是否也在寻找：';
+        foreach($aLike as $a){
+            echo '<a href="/'.$a['id'].'">'.$a['name'].'</a>';
+        }
+        echo '</s>';
+    }
+
+    echo '播放地址'.$n.':</p><p id="bf">';
+    foreach ($aDown[$n] as $a){
+        echo '<a href="/'.$a['id'].'p">'.$a['title'].'</a>';
+    }
+    echo '</p>';
+    $m++;
+}
+?><div id="a963"><script>a2()</script></div><p id="dt">喜欢看《<?php echo $aDet['name']; ?>》的人也喜欢:</p><p id="dp"><?php foreach($aHot as $aTem){echo '<a href="/'.$aTem['id'].'"><img src="/up/m/'.$aTem['pic'].'" />'.$aTem['name'].'</a>';} ?></p><p id="dt"><?php echo $aDet['name'] ?>全集剧情介绍</p><div id="dd"><?php echo $aDet['detail'] ?></div><p id="dt"><?php echo $aDet['name'] ?>下载影片评论</p><div id="pp"><b>网友评论</b> 共<em><?php echo $nCmt; ?></em>条评论<?php 
+if (empty($aCmt)){    
+    echo '<p>暂无网友评论，就等你了~~</p>';
+}else {
+
+    foreach ($aCmt as $aTem){
+        echo '<p><i><em>网友</em> 发表于：'.date('Y-m-d H:i:s',$aTem['ctime']).'</i>'.$aTem['cont'].'</p>';
+    }
+}?></div><script>b()</script></body></html>

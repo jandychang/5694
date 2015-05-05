@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<?php echo $nCurr>1?'<title>演员列表第'.$nCurr.'页'.'</title>':'<title>香港女演员_内地女演员_大陆男演员_内地男演员_香港男演员_大陆女演员</title><meta name="keywords" content="香港女演员,内地女演员,大陆男演员,内地男演员,香港男演员,大陆女演员" /><meta name="description" content="5694演员大全栏目提供香港女演员,内地女演员,大陆男演员,内地男演员,香港男演员,大陆女演员,三级片演员,韩国女演员等,众多一、二线热门演员资料。" />'; ?>
+<link href="/i/m.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/i/m.js"></script>
+</head>
+<body>
+<script>a(0)</script>
+<div id="t"><a href="/"><img src="/i/lg.png" alt="美剧排行榜" /></a></div>
+<?php echo gCla(1,0); ?>
+<script>a(1)</script>
+<b id="b"><em>演员大全列表</em></b>
+<p id="l"><?php
+            foreach($aList as $aTem){
+                echo '<a href="/'.$aTem['fn'].'"><img src="'.$aTem['npic'].'" />'.$aTem['name'].'</a>';
+            }
+            ?></p>
+<p id="pg"><?php echo $sPage2; ?></p>
+<script>a(2)</script>
+<b id="b"><em>推荐演员</em></b>
+<p id="l"><?php foreach($aComm as $aTem){echo '<a href="/'.$aTem['fn'].'">'.$aTem['name'].'</a>';} ?></p>
+<b id="b"><em>热门演员</em></b>
+<p id="l"><?php foreach($aHot as $aTem){echo '<a href="/'.$aTem['fn'].'">'.$aTem['name'].'</a>';} ?></p>
+<script>f()</script>
+</body>
+</html>

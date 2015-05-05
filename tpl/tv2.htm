@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title><?php echo str_replace(' ','',$aArc['name']); ?>电视剧</title><meta name="keywords" content="" /><meta name="description" content="提供<?php echo $aArc['name']; ?>" /><link href="/i/c.css" rel="stylesheet" type="text/css" /><script type="text/javascript" src="/i/s.js"></script></head><body><h1><?php echo $aArc['name'] ?>_电视剧</h1><p id="t"><a href="/"><img src="/i/lg.png" alt="美剧排行榜" /></a></p><?php echo gCla(100); ?><div id="a960"><script>a1()</script></div><p id="h">当前位置：5694<a href="/">粉丝网</a> &gt; <a href="/tv">电视剧大全</a> &gt; <a href="/<?php echo $aArc['fn']; ?>"><?php echo $aArc['name'] ?></a></p><dl id="de" i="<?php echo $aArc['id']; ?>"><dt><script>a3()</script></dt><dd><script>a5();</script><p>名称 ：<a href="/<?php echo $aArc['fn'] ?>"><?php echo $aArc['name'] ?></a><br /><?php echo empty($aArc['name2'])?'':'别名 ：'.$aArc['name2'].'<br />'; ?>导演 ：<?php 
+$sDY = '';
+if (!empty($aDID)){
+    foreach($aDID as $id){
+        if ($aUser[$id]['status']==1){
+            $sDY .= '<a href="/'.$aUser[$id]['fn'].'">'.$aUser[$id]['name'].'</a> ';
+        }elseif(isset($aUser[$id])){
+            $sDY .= $aUser[$id]['name'].' ';
+        }
+    }
+}
+if (empty($sDY)){
+    echo $aArc['dy'];
+}else {
+    echo $sDY;
+}
+?><br />主演 ：<?php 
+if (!empty($aYID)){
+    foreach($aYID as $id){
+        if ($aUser[$id]['status']==1){
+            echo '<a href="/'.$aUser[$id]['fn'].'">'.$aUser[$id]['name'].'</a> ';
+        }else{
+            echo $aUser[$id]['name'].' ';
+        }
+    }
+}else {
+    echo $aArc['yy'];
+}
+?><br />标签 ：<?php echo $aArc['k'] ?><br />地区 ：<?php echo $aArc['addr'] ?><br />集数 ：<?php echo $aArc['ji'] ?><br /></p><img src="<?php echo $aArc['npic'] ?>" alt="<?php echo $aArc['name'] ?>" /></dd></dl><div id="a963"><script>a2()</script></div><p id="dt"><?php echo $aMV['name'] ?>粉丝精华热议：</p><div id="dd"><?php echo preg_replace('/\r\n|\n/','<br />',$aArc['txt']) ?></div><p id="dt">《<?php echo $aArc['name']; ?>》的演员列表：</p><div id="dp"><?php 
+if (!empty($aYID)){
+    foreach($aYID as $id){
+        if ($aUser[$id]['status']==1){
+            echo '<a href="/'.$aUser[$id]['fn'].'"><img src="'.$aUser[$id]['npic'].'" />'.$aUser[$id]['name'].'</a> ';
+        }else if(!empty($aUser[$id]['npic'])){
+            echo '<i><img src="'.$aUser[$id]['npic'].'" />'.$aUser[$id]['name'].'</i>';
+        }
+    }
+}
+?></div><p id="dt">喜欢看《<?php echo $aArc['name']; ?>》的粉丝还喜欢：</p><p id="dp"><?php foreach($aLike as $aTem){
+    if ($aTem['fabu']==1){
+        echo '<a href="/'.$aTem['fn'].'"><img src="'.$aTem['npic'].'" /><b>'.$aTem['name'].'</b>'.$aTem['ji'].'</a>';
+    }else {
+        echo '<i><img src="'.$aTem['npic'].'" /><b>'.$aTem['name'].'</b>'.$aTem['ji'].'</i>';
+    }
+} ?></p><p id="dt"><?php echo $aArc['name'] ?>粉丝精彩评论：</p><div id="pp"><b>网友评论</b> 共<em><?php echo $nCmt; ?></em>条评论<?php 
+if (empty($aCmt)){
+    echo '<p>暂无网友评论，就等你了~~</p>';
+}else {
+    foreach ($aCmt as $aTem){
+        echo '<p><i><em>网友</em> 发表于：'.date('Y-m-d H:i:s',$aTem['ctime']).'</i>'.$aTem['cont'].'</p>';
+    }
+}?></div><script>b()</script></body></html>

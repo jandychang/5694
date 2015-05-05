@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title><?php echo $aArc['name']; ?>演过的电视剧_<?php echo $aArc['name']; ?>演过的电影_<?php echo $aArc['name']; ?>主演的电视剧</title><meta name="keywords" content="<?php echo $aArc['name']; ?>演过的电视剧,<?php echo $aArc['name']; ?>演过的电影,<?php echo $aArc['name']; ?>主演的电视剧" /><meta name="description" content="提供<?php echo $aArc['name']; ?>演过的电视剧,<?php echo $aArc['name']; ?>演过的电影,<?php echo $aArc['name']; ?>主演的电视剧,以及<?php echo $aArc['name']; ?>粉丝精彩评论和最新精华热议。" />
+<link href="/i/m.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/i/m.js"></script>
+</head>
+<body><h1><?php echo $aArc['name'] ?>演过的电视剧</h1>
+<script>a(0)</script>
+<div id="t"><a href="/"><img src="/i/lg.png" alt="美剧排行榜" /></a></div>
+<?php echo gCla(1,0); ?>
+<script>a(1)</script>
+<p id="h">5694<a href="/">粉丝</a> &gt; <a href="/yanyuan">演员大全</a> &gt; <a href="/<?php echo $aArc['fn']; ?>"><?php echo $aArc['name'] ?></a></p>
+
+<p id="p"><img src="<?php echo $aArc['npic'] ?>" alt="<?php echo $aArc['name'] ?>" />姓　名 ：<a href="/<?php echo $aArc['fn'] ?>"><?php echo $aArc['name'] ?></a><br /><?php echo empty($aArc['name2'])?'':'别　名 ：'.$aArc['name2'].'<br />'; ?>职　业 ：<?php echo $aArc['pos'] ?><br />性　别 ：<?php echo $aArc['sex'] ?><br />出生地 ：<?php echo $aArc['addr'] ?><br />生　日 ：<?php echo $aArc['bir'] ?><br /></p>
+
+<?php if($aMo[2][1]>0){ ?><b id="b"><a href="/<?php echo $aArc['fn']; ?>_dianying"><?php echo $aArc['name']; ?>演过的电影 （共<?php echo $aMo[2][1]; ?>部）</a></b><p id="l"><?php foreach($aMo[1][1] as $aTem){echo '<i><img src="'.$aTem['npic'].'" /><b>'.$aTem['name'].'</b>'.(intval($aTem['year'])>0?intval($aTem['year']).'年':'').'</i>';} ?></p><?php } if($aMo[2][0]>0){ ?><b id="b"><a href="/<?php echo $aArc['fn']; ?>_tv"><?php echo $aArc['name']; ?>演过的电视剧 （共<?php echo $aMo[2][0]; ?>部）</a></b><p id="l"><?php foreach($aMo[1][0] as $aTem){echo '<i><img src="'.$aTem['npic'].'" /><b>'.$aTem['name'].'</b>'.$aTem['ji'].'</i>';} ?></p><?php } ?>
+
+<script>a(2)</script>
+<b id="b"><em><?php echo $aArc['name'] ?>粉丝精华热议：</em></b>
+
+<div id="d"><?php echo preg_replace('/\r\n|\n/','<br />',$aArc['det']) ?></div><b id="b"><em>喜欢看《<?php echo $aArc['name']; ?>主演的电视剧》粉丝还喜欢：</em></b><p id="l"><?php foreach($aLike as $aTem){echo '<a href="/'.$aTem['fn'].'"><img src="'.$aTem['npic'].'" />'.$aTem['name'].'</a>';} ?></p>
+<script>f()</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title><?php echo $nYear.'美剧排行榜'.($nCurr>1?'第'.$nCurr.'页':'') ?></title>
+<link href="/i/m.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/i/m.js"></script>
+</head>
+<body>
+<script>a(0)</script>
+<div id="t"><a href="/"><img src="/i/lg.png" alt="美剧排行榜" /></a></div>
+<?php echo gCla(1,0); ?>
+<script>a(1)</script>
+<p id="ls"><b>美剧排行榜分类</b><?php echo gCla2(); ?><?php echo gCla3($nYear); ?></p>
+<b id="b"><em>美剧排行榜前十名<?php echo $nYear ?></em></b>
+<p id="x"><a href="/d<?php echo $nYear ?>" class="c">按更新时间</a><a href="/h<?php echo $nYear ?>">按热门程度</a></p>
+<p id="l"><?php
+foreach($aList as $aTem){
+    echo '<a href="/'.$aTem['id'].'"><img src="/up/m/'.$aTem['pic'].'" />'.$aTem['name'].'</a>';
+}
+?></p>
+<p id="pg"><?php echo $sPage2; ?></p>
+<script>f()</script>
+</body>
+</html>

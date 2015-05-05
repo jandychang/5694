@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title><?php echo $aDet['name']; ?>_<?php echo $aDet['name']; ?>全集_<?php echo $aDet['name']; ?>下载</title><meta name="keywords" content="<?php echo $aDet['name']; ?>,<?php echo $aDet['name']; ?>全集,<?php echo $aDet['name']; ?>下载" /><meta name="description" content="<?php echo $aDet['name']; ?>提供<?php echo $aDet['name']; ?>全集剧情介绍,<?php echo $aDet['name']; ?>下载影片观点评论,以及喜欢看《<?php echo $aDet['name']; ?>》的人也喜欢看的其它精彩影片推荐。" />
+<link href="/i/m.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/i/m.js"></script>
+</head>
+<body><h1><?php echo $aDet['name'] ?></h1>
+<script>a(0)</script>
+<div id="t"><a href="/"><img src="/i/lg.png" alt="美剧排行榜" /></a></div>
+<?php echo gCla(1,0); ?>
+<script>a(1)</script>
+<p id="h"><a href="/"><?php echo $aIndex['name']; ?></a> &gt; <?php echo $aDet['oid']>0?'<a href="/'.$aCla[$aDet['oid']]['pinyin'].'">'.$aCla[$aDet['oid']]['name'].'片</a> &gt; ':''; ?><a href="/<?php echo $aDet['id'] ?>"><?php echo $aDet['name'] ?></a></p>
+
+<p id="p"><img src="/up/m/<?php echo $aDet['pic'] ?>" alt="<?php echo $aDet['name'] ?>" />名　　称 ：<a href="/<?php echo $aDet['id'] ?>"><?php echo $aDet['name'] ?></a><br />类　　型 ：<?php echo $aDet['oid']>0?'<a href="/'.$aCla[$aDet['oid']]['pinyin'].'">'.$aCla[$aDet['oid']]['name'].'片</a>':''; ?><br />主　　演 ：<?php echo $aDet['zy'] ?><br />地　　区 ：欧美<br />语　　言 ：<?php echo $aDet['lang'] ?><br />年　　份 ：<?php echo $aDet['year'] ?><br />更新时间 ：<?php echo date('Y-m-d H:i',$aDet['utime']) ?></p>
+
+
+
+<?php
+$m=0;
+foreach ($aOrd as $n => $s){
+    if ($m==0 && !empty($aLike)){
+        echo '<b id="b"><em>您是否也在寻找：</em></b><p id="l">';
+        foreach($aLike as $a){
+            echo '<a href="/'.$a['id'].'">'.$a['name'].'</a>';
+        }
+        echo '</p>';
+    }
+
+    echo '<b id="b"><em>播放地址'.$n.':</em></b><p id="i">';
+    foreach ($aDown[$n] as $a){
+        echo '<a href="/'.$a['id'].'p">'.$a['title'].'</a>';
+    }
+    echo '</p>';
+    $m++;
+}
+?>
+<script>a(2)</script>
+<b id="b"><em>喜欢看《<?php echo $aDet['name']; ?>》的人也喜欢:</em></b>
+<p id="l"><?php foreach($aHot as $aTem){echo '<a href="/'.$aTem['id'].'"><img src="/up/m/'.$aTem['pic'].'" />'.$aTem['name'].'</a>';} ?></p>
+<b id="b"><em><?php echo $aDet['name'] ?>全集剧情介绍</em></b><div id="d"><?php echo $aDet['detail'] ?></div>
+<script>f()</script>
+</body>
+</html>

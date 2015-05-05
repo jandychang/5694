@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title><?php echo $aMV['name']; ?></title><link href="/i/c.css" rel="stylesheet" type="text/css" /><script type="text/javascript" src="/i/s.js"></script></head><body><h1><?php echo $aMV['name']; ?></h1><p id="t"><a href="/"><img src="/i/lg.png" alt="美剧排行榜" /></a></p><?php echo gCla(100); ?><div id="a960"><script>a1()</script></div><p id="h">当前位置：5694<a href="/">粉丝网</a> &gt; <?php echo $aMV['cid']==2?'电影':'电视剧'; ?>大全 &gt; <?php echo $aMV['name'] ?></p><dl id="de" i="<?php echo $aMV['id']; ?>"><dt><script>a3()</script></dt><dd><script>a5();</script><p>片名：<?php echo $aMV['name'] ?><?php 
+echo empty($aMV['name2'])?'<br />':' （'.$aMV['name2'].'）<br />';
+echo empty($aMV['dy'])?'':'导演：'.$aMV['dy'].'<br />';
+echo empty($aMV['yy'])?'':'主演：'.$aMV['yy'].'<br />';
+echo empty($aMV['k'])?'':'标签：'.$aMV['k'].'<br />';
+echo empty($aMV['addr'])?'':'地区：'.$aMV['addr'].'<br />';
+
+if ($aMV['cid'] == 1){
+    echo empty($aMV['ji'])?'':'集数：'.$aMV['ji'].'<br />';
+}
+else {
+echo empty($aMV['year'])?'':'年份：'.$aMV['year'].'<br />';
+echo empty($aMV['long'])?'':'时长：'.$aMV['long'].'<br />';
+//echo empty($aMV['fen'])?'':'评分：'.$aMV['fen'].'<br />';
+}
+?></p><img src="<?php echo $aMV['npic'] ?>" alt="<?php echo $aMV['name'] ?>" /></dd></dl><div id="a963"><script>a2()</script></div><p id="dt"><?php echo $aMV['name'] ?>粉丝精华热议：</p><div id="dd"><?php echo preg_replace('/\r\n|\n/','<br />',$aMV['txt']) ?></div><p id="dt">《<?php echo $aMV['name']; ?>》导演的更多<?php echo $aMV['cid']==2?'电影':'电视剧'; ?>：</p><p id="dp"><?php foreach($aLike as $aTem){echo '<i><img src="'.$aTem['npic'].'" />'.$aTem['name'].'</i>';} ?></p><p id="dt"><?php echo $aMV['name'] ?>粉丝喜欢的演员：</p><p id="dp"><?php foreach($aYY as $aTem){echo '<a href="/'.$aTem['fn'].'"><img src="'.$aTem['npic'].'" />'.$aTem['name'].'</a>';} ?></p><p id="dt"><?php echo $aMV['name'] ?> 精彩评论：</p><div id="pp"><b>网友评论</b> 共 <em>0</em> 条评论<p>暂无网友评论，就等你了~~</p></div><script>b()</script></body></html>
