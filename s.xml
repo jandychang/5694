@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset>
+<url>
+<loc><![CDATA[http://www.5694.com/]]></loc>
+<lastmod>2014-11-12</lastmod>
+<changefreq>always</changefreq>
+<priority>1.0</priority>
+<data>
+<display>
+<pc_url_pattern><![CDATA[http://www.5694.com/]]></pc_url_pattern>
+<html5_url_pattern><![CDATA[http://m.5694.com/]]></html5_url_pattern>
+</display>
+</data>
+</url>
+<url>
+<loc><![CDATA[http://www.5694.com/]]></loc>
+<lastmod>2014-01-12</lastmod>
+<changefreq>always</changefreq>
+<priority>1.0</priority>
+<data>
+<display>
+<pc_url_pattern><![CDATA[http://www.5694.com/(\w+)]]></pc_url_pattern>
+<html5_url_pattern><![CDATA[http://m.5694.com/${1}]]></html5_url_pattern>
+</display>
+</data>
+</url>
+</urlset>
