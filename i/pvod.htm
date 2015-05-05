@@ -1,0 +1,10 @@
+﻿<HEAD></HEAD><BODY topmargin=0 leftmargin=0>
+<script>
+ var wdurl = unescape(window.location.href);
+var allargs = wdurl.split("&");
+        var url=allargs[0].split("a=")[1];
+        var w=allargs[1].split("w=")[1];
+        var h=allargs[2].split("h=")[1];
+document.write('<object classid="CLSID:1DD5176B-B71E-4956-8F32-691702ACDCFE" width="'+w+'" height="'+h+'" onError="location.href=\'\/i\/nopvod.htm\'"><PARAM NAME="URL" VALUE="'+url+'"><PARAM NAME="NextWebUrl" VALUE=""><\/object>');
+</script>
+</body>

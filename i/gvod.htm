@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+body{
+	margin:0px;
+	background-color:black;
+	font-size:12px;
+	color:#99B6D6;
+	line-height:17px;
+}
+*{
+	margin:0px;
+	padding:0px;
+}
+
+#outer{
+	position:abwwwlute;
+	top:50%;
+	width:100%;
+	float:left;
+	z-index:10000;
+}
+#outer2{
+	position:abwwwlute;
+	top:-50px;
+	width:100%;
+}
+#wrapper{
+	position:relative;
+	margin:auto;
+	padding-left:30px;
+	width:410px;
+	height:320px;
+}
+#left{
+	width:173px;
+	float:left;
+	margin:0 10px 0 0;
+}
+#right{
+	width:220px;
+	float:left;
+	margin-top:3px;
+}
+#btn{
+	width:173px;
+	height:55px;
+	
+}
+#btn>a{
+	width:173px;
+	height:55px;
+	display:block;
+}
+a{
+	color:#CBDEF0;
+}
+a:hover{
+	text-decoration:none;
+}
+#ver{
+
+	width:173px;
+	height:55px;
+	curwwwr:hand;
+}
+#text{
+	position:relative;
+	top:33px;
+	left:20px;	
+}
+#shadow{
+	margin-top:12px;
+	width:173px;
+	height:45px;
+	clear:both;
+}
+#bottom{
+	position:absolute;
+	bottom:0px;
+	background:red;
+	height:29px;
+	width:100%;
+}
+#player_left{
+	float:left;
+	width:75px;
+	height:29px;
+}
+#player_right{
+	float:right;
+	width:259px;
+	height:29px;
+}
+
+#mark{
+	position:abwwwlute;
+	width:234px;
+	height:208px;
+	float:right;
+	right:0px;
+	bottom:0px;;
+	z-index:0;
+}
+.clear(
+	clear:both;
+}
+</style>
+<title>请安装迅播GVOD播放器</title>
+<script>
+	function trackAndDown(turl, durl){
+		pgvByImg(turl)
+		//pageTracker._trackPageview('/install_page_download');
+		setTimeout( function(){location.href=durl;}, 300 )
+		
+	}
+	function getParameter(name){
+		var search = document.location.search;
+		var pattern = new RegExp("[?&]"+name+"\=([^&]+)", "g");
+		var matcher = pattern.exec(search);
+		var items = null;
+		if(null != matcher){
+			items = decodeURIComponent(matcher[1]);
+			//items = unescape(matcher[1]);
+		}
+		return items;
+	}
+	
+	function pgvByImg(u) {
+		var  statImg = new Image();
+		statImg.src = u+"&lasttime="+(new Date().getTime());
+	}
+	window.onload = function ()
+	{
+	}
+
+</script>
+</head>
+<body>
+<div id="outer">
+<div id="outer2">
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<div id="wrapper" style="height:110px;">
+	<div id="left">
+		<div id="btn">
+			
+			
+			
+			<script>
+				var hostName="";
+				try{
+					//hostName = location.href.split("hostname=")[1];
+					hostName = getParameter("hostname");
+				}catch(E){}
+				var durl;
+				if(hostName){
+					durl = "http://www.xunbo.cc/install/gvod_std_1.6.2.3124.zip";
+				}else{
+					durl = "http://www.xunbo.cc/install/gvod_std_1.6.2.3124.zip";
+				}
+				var str = '\
+				<a href="'+durl+'">\
+				<div id="ver">\
+					<div id="text">GVOD 1.6.2.3124</div>\
+				</div>	\
+				</a>';
+				
+				document.write(str);
+			</script>
+			
+			
+		</div>
+		<div id="shadow"></div>
+	</div>
+	<div id="right">
+		<p>本影片的播放需要GVOD高清点播技术，</p>
+		<p>请先安装 
+			<script>
+				var hostName="";
+				try{
+					//hostName = location.href.split("hostname=")[1];
+					hostName = getParameter("hostname");
+				}catch(E){}
+				var durl;
+				if(hostName){
+					durl = "http://www.xunbo.cc/install/gvod_std_1.6.2.3124.zip";
+				}else{
+					durl = "http://www.xunbo.cc/install/gvod_std_1.6.2.3124.zip";
+				}
+				var str = '<a href="'+durl+'">迅播GVOD播放器</a>'
+				document.write(str);
+			</script>
+			
+		</p>
+		<p>安装完成后请刷新页面或按F5</p>
+	</div>
+</div>
+
+
+</div>
+</div>
+<div id="mark">
+</div>
+<div class="clear"></div>
+<div id="bottom">
+	<div id="player_left"></div>
+	<div id="player_right"></div>
+</div>
+
+</body>
+</html>

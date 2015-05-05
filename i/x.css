@@ -1,0 +1,19 @@
+body{font:12px/1.5 "宋体";margin:0;}p{margin:0;padding:0;}
+dl,dd,dt,p,ul,li{margin:0;padding:0;list-style:none;} 
+#ls {border:10px solid #BBB;width:700px;background:#FFF;}        
+i,s,u,em,b{font-style:normal;text-decoration:none;display:inline-block;}
+#ls dd p i{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+#ls dt{height:57px;background:url(/i/l.jpg) repeat-x;line-height:28px;overflow:hidden;}
+#ls dt a{color:#FFF;text-decoration: none;display:inline-block;padding:0 8px;height:18px;line-height:18px;margin:5px 5px;overflow:hidden;}
+#ls a:hover{color:#F90;}
+#ls dt a.c{background:#FFF;color:#F90;}
+#ls dt p a.c{height:28px;line-height:28px;margin:0 5px;}
+
+#ls dd{overflow-y:auto;height:400px;padding:5px 0;line-height:25px;}
+#ls dd p{color:#555;border-bottom:1px solid #DDD;}
+#ls dd p.c{background:#F0F0F0;}#ls dd p.n{background:#Ff9;}
+#ls dd p b{width:70px;text-align:right;}
+#ls dd p i{width:430px;margin:0 10px;}
+#ls dd p i img{width:24px;height:12px;float:right;margin:0 0 0 406px;}
+#ls dd p u{width:70px;}
+#ls dd p a{text-decoration:none;color:blue;}
