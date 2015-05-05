@@ -1,0 +1,36 @@
+/* CSS Document */
+body{font-size:13px;font-family:"宋体";line-height:20px;width:900px;}
+a{text-decoration:none;color:#06c}i,u,s{text-decoration:none;font-style:normal;}
+a:hover{color:#F60; text-decoration:underline;}
+dl,dt,dd,form{margin:0;padding:0;}
+dl{border:1px solid #999;padding:1px;margin-bottom:5px;}
+dt{padding:5px;background:#DDD;}
+dd a{display:block;height:20px;line-height:20px;text-indent:10px;border-bottom:1px solid #EEE;}
+.comm input[type="text"]{border:1px solid #999;width:400px;}
+.comm strong{display:inline-block;width:100px;text-align:right;}
+.ls{border:1px solid #CCC;padding:10px;margin:0 0 10px;background:#F8F8F8;} .lss{background:#FF9;}
+.ls div{display:none;}
+.s b{display:inline-block;width:80px;margin:5px 10px 0 0;text-align:right;}
+.s input{border:1px solid #999;width:400px;}
+.s input.w80{width:80px;line-height:16px;}
+.s input.w700{width:700px;}
+.s input.w100{width:100px;}
+#fo,#f1{font-size:14px;border:1px dashed #F60;padding:10px;width:878px;background:#DFF3CD;color:#666;margin:0 0 10px;}
+.d{padding:20px 0;}
+.d input,#fo .txt,#f1 .txt{border:1px solid #999;height:20px;width:240px;margin:0 2px 0 0;}
+#fo .txt{width:400px;} .d i{display:inline-block;font-style:normal;margin:0 10px 10px 0;color:#09C;font-family:sans-serif;font-size:10px;}
+
+#f1{font-size:12px;}#f1 .txt{width:100px;}
+.cd{vertical-align:bottom;}
+table{border:1px solid #999; text-align:center;padding:1px;}
+th{border:#999 solid 1px;background:#BBB;font-size:14px;color:#333;}
+td{padding:0;margin:0;border:#DDD solid 1px;color:#666}
+td.l{text-align:left;padding:0 0 0 10px;}
+tr.c{background:#F0F0F0;}
+input{margin:0 0 2px;}
+
+#pg a,#pg em,#pg s{font-style:normal;padding:3px;}#pg u,#pg a{margin:0 3px;}
+#pg s{color:#F60;font-weight:bold;}
+
+#fns{color:green;font-size:12px;padding:3px;}
+#fns.c{color:#FFF;background:#F00;}
