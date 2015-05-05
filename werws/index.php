@@ -9,7 +9,8 @@ error_reporting(0);?>
 </head> 
 
 <?php 
-if ($_SESSION['login'] != 'YES' && isset($_POST['name']) && md5($_POST['name'])=='d2bf7126723ea8f6005ba141ea3c3e2c' && md5($_POST['pass']) == '35b0a8df9b34cc013a3dd1c87daf36c3'){
+
+if ($_SESSION['login'] != 'YES' && isset($_POST['name']) && strtoupper(md5($_POST['name']))=='21232F297A57A5A743894A0E4A801FC3' && strtoupper(md5($_POST['pass'])) == 'E10ADC3949BA59ABBE56E057F20F883E'){
 	$_SESSION['login'] = 'YES';
 }
 

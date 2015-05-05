@@ -7,9 +7,9 @@
 class cMysql
 {
     var $sHost = 'localhost'; //数据库服务器
-    var $sName = '';		  //数据库账号
-    var $sPass = '';		  //数据库密码
-    var $sData = '';		  //数据库名称
+    var $sName = 'root';		  //数据库账号
+    var $sPass = 'password';		  //数据库密码
+    var $sData = '5694';		  //数据库名称
     var $sConn = '';		  //数据库连接
     var $sChar = 'utf8';	  //数据库编码
 
@@ -29,6 +29,7 @@ class cMysql
         $this->sName = $sName;
         $this->sPass = $sPass;
         $this->sData = $sData;
+
         if (!empty($sHost))
         {
             $this->sHost = $sHost;
@@ -230,6 +231,6 @@ class cMysql
     }
 }
 
-$sUser = 'yyse';  $sPass = 'mZcPzymepUH2nuLD';  $sData = 'yyse';
+$sUser = 'root';  $sPass = 'password';  $sData = '5694';
 $gDB = new cMysql($sUser, $sPass, $sData, '', 'utf8');
 ?>
