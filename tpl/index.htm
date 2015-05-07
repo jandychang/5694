@@ -1,9 +1,1689 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title><?php echo ($nCurr>1?$aIndex['name'].'第'.$nCurr.'页':$aIndex['title']) ?></title><?php echo ($nCurr>1?'':'<meta name="keywords" content="'.$aIndex['keyword'].'" /><meta name="description" content="'.$aIndex['des'].'" />'); ?><link href="/i/c.css" rel="stylesheet" type="text/css" /><script type="text/javascript" src="/i/s.js"></script><?php if ($nCurr <= 1){echo '<base target="_blank" />';}?></head><body><p id="t"><a href="/"><img src="/i/lg.png" alt="美剧排行榜"/></a></p><?php echo gCla(); ?><div id="a960"><script>a1();</script></div><?php if ($nCurr <= 1){ ?><p id="dt">参与演员</p><p id="dp" class="in"><?php
-            foreach($aPers as $aTem){
-                echo '<a href="/'.$aTem['fn'].'"><img src="'.$aTem['npic'].'">'.$aTem['name'].'</a>';
-            }
-            ?></p><?php } ?><dl id="m"><dd><p id="ls"><b>经典美剧排行榜</b><?php echo gCla2(); ?><?php echo gCla3(0); ?></p><p id="lv"><b><u><a href="/" class="c">按更新时间</a><a href="/hot">按热门程度</a></u>天天最新美剧</b><?php
-            foreach($aList as $aTem){
-                echo '<i><a href="/'.$aTem['id'].'"><img src="/up/m/'.$aTem['pic'].'" />'.$aTem['name'].'</a><br /><u>主演：'.$aTem['zy'].'</u>地区：欧美 年份：'.$aTem['year'].'<br />语言：'.$aTem['lang'].'<br />时间：'.date('m-d',$aTem['utime']).'<br /><u>剧集介绍：'.cut(strip_tags($aTem['detail']),50).'</u>'.(isset($aBO[$aTem['id']])?'<a href="/'.$aBO[$aTem['id']]['id'].'p" class="gk">立即观看</a>':'').'<a href="/'.$aTem['id'].'" class="mr">详细资料>></a></i>';
-            }
-            ?><span><?php echo $sPage; ?></span></p></dd><dt><p><b>美剧排行榜2013</b><?php foreach($aHot as $aTem){echo '<i><a href="/'.$aTem['id'].'">'.$aTem['name'].'</a>'.date('m-d',$aTem['utime']).'</i>';} ?></p><p><b>好看的美剧推荐</b><?php foreach($aComm as $aTem){echo '<i><a href="/'.$aTem['id'].'">'.$aTem['name'].'</a>'.date('m-d',$aTem['utime']).'</i>';} ?></p></dt></dl><div id="a962"><script>a2();</script></div><?php if ($nCurr <= 1){ ?><p id="dt">友情链接</p><p id="lk"><?php if(!empty($aLink)){foreach($aLink as $aTem){echo '<a href="'.$aTem['link'].'">'.$aTem['name'].'</a>';}}?></p><?php } ?><script>b();</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><?php echo ($nCurr>1?$aIndex['name'].'第'.$nCurr.'页':$aIndex['title']) ?></title>
+    <?php echo ($nCurr>1?'':'<meta name="keywords" content="'.$aIndex['keyword'].'" /><meta name="description" content="'.$aIndex['des'].'" />'); ?>
+	<link rel="stylesheet" href="/i/i.css">
+	<!--IE6测试 -->
+  	<!-- <script type="text/javascript" src="https://getfirebug.com/firebug-lite-debug.js"></script>  -->
+<?php if ($nCurr <= 1){echo '<base target="_blank" />';}?></head>
+<body>
+	<div id="t">
+		<i id="bg"></i>
+		<div id="s">
+			<a href=""><img src="/i/lg.png" alt=""></a>
+			<form action="">
+				<input type="text" id="ss">
+				<input type="submit" id="sb" value="搜索">
+			</form>
+			<p>
+				<a class="ph" href="">排行榜</a>
+				<a class="dp" href="">最近更新</a>
+				<a class="sc" href="">收藏我们</a>
+			</p>
+		</div>
+		<p id="n">
+			<a class="c" href="">首页</a><a href="">电影</a><a href="">电视剧</a><a href="">综艺</a><a href="">动漫</a><a href="">游戏</a><a href="">直播</a><a href="">科幻</a><a href="">恐怖</a>
+		</p>
+	</div>
+	<div id="b">
+		<p>
+			<a class="c" href="">
+				<img src="http://p18.qhimg.com/t015cbcf2d324f8eda4.jpg" alt="">
+				<s>
+					<b>少年四大名捕</b>
+					张翰领衔美男神捕团 杨洋陈伟霆掀舔屏战
+				</s>
+				
+			</a>
+			<a href="">
+				<img src="http://p18.qhimg.com/t015cbcf2d324f8eda4.jpg" alt="">
+				<s>
+					<b>11111111111111</b>
+					张翰领衔美男神捕团 杨洋陈伟霆掀舔屏战
+				</s>
+				
+			</a>
+			<a href="">
+				<img src="http://p18.qhimg.com/t015cbcf2d324f8eda4.jpg" alt="">
+				<s>
+					<b>222222222222</b>
+					张翰领衔美男神捕团 杨洋陈伟霆掀舔屏战
+				</s>
+				
+			</a>
+			<a href="">
+				<img src="http://p18.qhimg.com/t015cbcf2d324f8eda4.jpg" alt="">
+				<s>
+					<b>3333333333333333</b>
+					张翰领衔美男神捕团 杨洋陈伟霆掀舔屏战
+				</s>
+				
+			</a>
+			<a href="">
+				<img src="http://p18.qhimg.com/t015cbcf2d324f8eda4.jpg" alt="">
+				<s>
+					<b>444444444444444</b>
+					张翰领衔美男神捕团 杨洋陈伟霆掀舔屏战
+				</s>
+				
+			</a>
+			<a href="">
+				<img src="http://p18.qhimg.com/t015cbcf2d324f8eda4.jpg" alt="">
+				<s>
+					<b>55555555555555</b>
+					张翰领衔美男神捕团 杨洋陈伟霆掀舔屏战
+				</s>
+				
+			</a>
+			<a href="">
+				<img src="http://p18.qhimg.com/t015cbcf2d324f8eda4.jpg" alt="">
+				<s>
+					<b>66666666666666666</b>
+					张翰领衔美男神捕团 杨洋陈伟霆掀舔屏战
+				</s>
+				
+			</a>
+			<a href="">
+				<img src="http://p18.qhimg.com/t015cbcf2d324f8eda4.jpg" alt="">
+				<s>
+					<b>777777777777777777</b>
+					张翰领衔美男神捕团 杨洋陈伟霆掀舔屏战
+				</s>
+				
+			</a>
+			<a href="">
+				<img src="http://p18.qhimg.com/t015cbcf2d324f8eda4.jpg" alt="">
+				<s>
+					<b>8888888888888888888</b>
+					张翰领衔美男神捕团 杨洋陈伟霆掀舔屏战
+				</s>
+				
+			</a>
+			
+		</p>
+		<div>
+			<a style="display:block" bg="http://p2.qhimg.com/t012148500759aa35c4.png" href=""></a>
+			<a bg="http://p2.qhimg.com/t012148500759aa35c4.png" href="">11111111111111</a>
+			<a bg="http://p15.qhimg.com/t0143e54da876bb7829.jpg" href="">2222222222222222</a>
+			<a bg="http://p2.qhimg.com/t012148500759aa35c4.png" href="">33333333333333</a>
+			<a bg="http://p7.qhimg.com/t01190c4e4d2a185cb7.jpg" href="">444444444444444444</a>
+			<a bg="http://p15.qhimg.com/t01f93ea03951da67e4.jpg" href="">555555555555555555</a>
+			<a bg="http://p2.qhimg.com/t012148500759aa35c4.png" href="">6666666666666666666666</a>
+			<a bg="http://p2.qhimg.com/t012148500759aa35c4.png" href="">7777777777777777777</a>
+			<a bg="http://p2.qhimg.com/t012148500759aa35c4.png" href="">88888888888888888</a>
+		</div>
+	</div>
+	<dl id="c">
+		<dt>
+			<a class="a1" href="">测试测试</a>
+			<a class="a2" href="">测试测试</a>
+			<a class="a3" href="">测试测试</a>
+			<a class="a4" href="">测试测试</a>
+			<a class="a5" href="">测试测试</a>
+			<a class="a6" href="">测试测试</a>
+			<a class="a7" href="">测试测试</a>
+		</dt>
+		<dd>
+			<a class="b" href="">
+				<img src="http://p6.qhimg.com/t01cdd086ca3eebd5c2.jpg" alt="">
+				<s>掠走2800万逃逸</s>
+				<u>内地悍匪绑架富家女</u>
+				<i></i>
+			</a>
+			<a href="">
+				<img src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg" alt="">
+				<s>掠走2800万逃逸</s>
+				<u>内地悍匪绑架富家女</u>
+				<i></i>
+			</a>
+			<a href="">
+				<img src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg" alt="">
+				<s>掠走2800万逃逸</s>
+				<u>内地悍匪绑架富家女</u>
+				<i></i>
+			</a>
+			<a href="">
+				<img src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg" alt="">
+				<s>掠走2800万逃逸</s>
+				<u>内地悍匪绑架富家女</u>
+				<i></i>
+			</a>
+			<a href="">
+				<img src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg" alt="">
+				<s>掠走2800万逃逸</s>
+				<u>内地悍匪绑架富家女</u>
+				<i></i>
+			</a>
+			<a href="">
+				<img src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg" alt="">
+				<s>掠走2800万逃逸</s>
+				<u>内地悍匪绑架富家女</u>
+				<i></i>
+			</a>
+			<a href="">
+				<img src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg" alt="">
+				<s>掠走2800万逃逸</s>
+				<u>内地悍匪绑架富家女</u>
+				<i></i>
+			</a>
+		</dd>
+	</dl>
+	<dl id="d">
+		<dt>
+			<b>热播榜</b>
+			<p class="p1">
+				<a href=""><i class="bgg">1</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i class="bgg">2</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i class="bgg">3</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i>4</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i>5</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i>6</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i>7</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i>8</i>特种兵之战狼<em>7.3</em></a>
+			</p>
+			<div id="a0"><a href=""><img src="http://img01.sogoucdn.com/app/a/07/5a0161d39715185c2b5dd89794449c54" alt=""></a></div>
+			<p class="p2">
+				<a href="">动作</a>
+				<a class="cor" href="">动作</a>
+				<a href="">动作</a>
+				<a class="cog" href="">动作</a>
+				<a class="cor" href="">动作</a>
+				<a href="">动作</a>
+				<a href="">动作</a>
+				<a href="">动作</a>
+				<a href="">动作</a>
+			</p>
+		</dt>
+		<dd>
+			<b><a class="dy" href=""><i></i>电影</a><u><a class="c" href="">最热</a><a href="">最热</a><a href="">最热</a><a href="">最热</a><a href="">最热</a><a href="">最热</a><a href="">最热</a></u><a class="m" href="">更多></a></b>
+			<p>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+			<p style="display:none">
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼111111111
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼111111111111111111
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+			<p style="display:none">
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼22222222222222222222222222222
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+			<p style="display:none">
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼33333333333333333333333333333
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼333333333333
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+			<p style="display:none">
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼4444444444444444444444444444
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+			<p style="display:none">
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼555555555555555555555555555
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+			<p style="display:none">
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼666666666666666666666666
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+		</dd>
+	</dl>
+	<dl id="d">
+		<dt>
+			<b>热播榜</b>
+			<p class="p1">
+				<a href=""><i class="bgg">1</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i class="bgg">2</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i class="bgg">3</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i>4</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i>5</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i>6</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i>7</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i>8</i>特种兵之战狼<em>7.3</em></a>
+			</p>
+			<div id="a0"><a href=""><img src="http://img01.sogoucdn.com/app/a/07/5a0161d39715185c2b5dd89794449c54" alt=""></a></div>
+			<p class="p2">
+				<a href="">动作</a>
+				<a href="">动作</a>
+				<a class="cor" href="">动作</a>
+				<a class="cor" href="">动作</a>
+				<a href="">动作</a>
+				<a class="cog" href="">动作</a>
+				<a href="">动作</a>
+				<a href="">动作</a>
+				<a href="">动作</a>
+			</p>
+		</dt>
+		<dd>
+			<b><a class="dy" href=""><i class="dsj"></i>电视剧</a><u><a class="c" href="">最热</a><a href="">最热</a><a href="">最热</a><a href="">最热</a><a href="">最热</a><a href="">最热</a><a href="">最热</a></u><a class="m" href="">更多></a></b>
+			<p>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+			<p style="display:none">
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼111111111
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼111111111111111111
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+			<p style="display:none">
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼22222222222222222222222222222
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+			<p style="display:none">
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼33333333333333333333333333333
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼333333333333
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+			<p style="display:none">
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼4444444444444444444444444444
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+			<p style="display:none">
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼555555555555555555555555555
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+			<p style="display:none">
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼666666666666666666666666
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+				<a href="">
+					<img src="http://img01.sogoucdn.com/app/a/100520052/78593efffe2f02bf0b9b2012b7b152ab" alt="">
+					<s>90分钟<em>7.3</em></s>
+					特种兵之战狼
+					<i>痞性十足的冷锋（吴京</i>
+					<u></u>
+				</a>
+			</p>
+		</dd>
+	</dl>
+	<dl id="d">
+		<dt>
+			<b>热播榜</b>
+			<div id="a0"><a href=""><img alt="" src="http://img01.sogoucdn.com/app/a/07/5a0161d39715185c2b5dd89794449c54"></a></div>
+			<p class="p1">
+				<a href=""><i class="bgg">1</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i class="bgg">2</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i class="bgg">3</i>特种兵之战狼<em>7.3</em></a>
+				<a href=""><i>4</i>特种兵之战狼<em>7.3</em></a>
+			</p>
+		</dt>
+		<dd>
+			<b><a href="" class="dy"><i class="zy"></i>综艺节目</a><u><a href="" class="c">最热</a><a href="">最热</a><a href="">最热</a><a href="">最热</a><a href="">最热</a><a href="">最热</a><a href="">最热</a></u><a href="" class="m">更多&gt;</a></b>
+			<div id="c1">
+				<a href="" class="b">
+					<img alt="" src="http://p6.qhimg.com/t01cdd086ca3eebd5c2.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+			</div>
+			<div id="c1" style="display:none">
+				<a href="" class="b">
+					<img alt="" src="http://p6.qhimg.com/t01cdd086ca3eebd5c2.jpg">
+					<s>掠走2800万2222222222222逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+			</div>
+			<div id="c1" style="display:none">
+				<a href="" class="b">
+					<img alt="" src="http://p6.qhimg.com/t01cdd086ca3eebd5c2.jpg">
+					<s>掠走280044444444444万逃33333333333333333333逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+				<a href="">
+					<img alt="" src="http://p6.qhimg.com/t0155555afbcc13c5f1.jpg">
+					<s>掠走2800万逃逸</s>
+					<u>内地悍匪绑架富家女</u>
+					<i></i>
+				</a>
+			</div>
+		</dd>
+	</dl>
+	<div id="e">
+		<b><a class="dy" href=""><i class="ch"></i>独家策划</a><u><a class="c" href="">最热</a><a href="" class="">最热</a><a href="" class="">最热</a><a href="" class="">最热</a><a href="" class="">最热</a><a href="" class="">最热</a><a href="" class="c">最热</a></u><a class="m" href="">更多&gt;</a></b>
+		<p>
+			<a class="a6" href="">
+				<img src="http://p9.qhimg.com/t01eafc89dc0b36fa9a.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a1" href="">
+				<img src="http://p17.qhimg.com/t01c4de1988252984a4.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a2" href="">
+				<img src="http://p17.qhimg.com/t0182a57fafa3216aa6.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a3" href="">
+				<img src="http://p19.qhimg.com/t01de42b87309cf4bc8.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a4" href="">
+				<img src="http://p17.qhimg.com/t011b8b294896a9e066.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a5" href="">
+				<img src="http://p16.qhimg.com/t013a87db245903a031.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+		</p>
+		<p style="display:none">
+			<a class="a6" href="">
+				<img src="http://p9.qhimg.com/t01eafc89dc0b36fa9a.jpg" alt="">
+				<i>
+					<em>井111111111111111111柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a1" href="">
+				<img src="http://p17.qhimg.com/t01c4de1988252984a4.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a2" href="">
+				<img src="http://p17.qhimg.com/t0182a57fafa3216aa6.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a3" href="">
+				<img src="http://p19.qhimg.com/t01de42b87309cf4bc8.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a4" href="">
+				<img src="http://p17.qhimg.com/t011b8b294896a9e066.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a5" href="">
+				<img src="http://p16.qhimg.com/t013a87db245903a031.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+		</p>
+		<p style="display:none">
+			<a class="a6" href="">
+				<img src="http://p9.qhimg.com/t01eafc89dc0b36fa9a.jpg" alt="">
+				<i>
+					<em>井22222222222222222222柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a1" href="">
+				<img src="http://p17.qhimg.com/t01c4de1988252984a4.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a2" href="">
+				<img src="http://p17.qhimg.com/t0182a57fafa3216aa6.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a3" href="">
+				<img src="http://p19.qhimg.com/t01de42b87309cf4bc8.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a4" href="">
+				<img src="http://p17.qhimg.com/t011b8b294896a9e066.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a5" href="">
+				<img src="http://p16.qhimg.com/t013a87db245903a031.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+		</p>
+		<p style="display:none">
+			<a class="a6" href="">
+				<img src="http://p9.qhimg.com/t01eafc89dc0b36fa9a.jpg" alt="">
+				<i>
+					<em>井柏33333333333333333333333然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a1" href="">
+				<img src="http://p17.qhimg.com/t01c4de1988252984a4.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a2" href="">
+				<img src="http://p17.qhimg.com/t0182a57fafa3216aa6.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a3" href="">
+				<img src="http://p19.qhimg.com/t01de42b87309cf4bc8.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a4" href="">
+				<img src="http://p17.qhimg.com/t011b8b294896a9e066.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+			<a class="a5" href="">
+				<img src="http://p16.qhimg.com/t013a87db245903a031.jpg" alt="">
+				<i>
+					<em>井柏然</em>
+					<s>《等风来》</s>
+					<s>《失孤》</s>
+					<s>《全城热恋》</s>
+					<s>《影子爱人》</s>
+					<s>《等风来》</s>
+				</i>
+			</a>
+		</p>
+	</div>
+	<div id="lk">
+		<b><a class="dy" href="">合作站点</a></b>
+		<p>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+			<a href=""><img src="http://p7.123.sogou.com/imgu/2013/07/20130704121722_887.png" alt=""></a>
+		</p>
+	</div>
+	<div id="f">
+		<p><a href="">意见反馈</a><a href="">意见反馈</a><a href="">意见反馈</a><a href="">意见反馈</a><a href="">意见反馈</a><a class="n" href="">意见反馈</a></p>
+		<p>Copyright © 360安全网址. All Rights Reserved. 京公网安备 110000000006号<a class="n" href="">京ICP证080047号</a></p>
+	</div>
+</body>
+<script src="http://libs.baidu.com/jquery/1.3.1/jquery.js"></script>
+<script src="/i/i.js"></script>
+</html>
